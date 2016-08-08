@@ -1,4 +1,4 @@
-application: blogverse
+application: blogversy
 version: blog-001
 runtime: python27
 api_version: 1

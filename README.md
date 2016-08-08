@@ -2,7 +2,7 @@
 ##### By: Sanaba Sangaré
 
 #### You can view a live version of Blogverse here:
-http://blogversy.appspot.com/blog
+http://blogversy.appspot.com/
 
 ## Table of Contents
 
