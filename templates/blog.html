@@ -24,10 +24,9 @@
       </button>
     </div>
     {% endif %}
-    <article>{{ post.content | safe }}</article>
+  <article class="blog-post">{{ post.content | safe }}</article>
     <br>
     <a href="/blog/{{ post.key.id() }}">Read more</a>
-
     <br>
   {% endfor %}
 
