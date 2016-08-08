@@ -1,0 +1,191 @@
+.navigation {
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-item a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    background-color: #f00;
+    color: #000;
+}
+
+body {
+    position: relative;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 14px;
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #000;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.welcome-header {
+    text-align: center;
+}
+
+.login-space {
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 83px;
+    right: 30px;
+}
+
+.login-link {
+    color: #fff;
+}
+
+.login-link:visited {
+    color: #fff;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #f00;
+}
+
+.main-title {
+    display: block;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: #f00
+}
+
+.sub-title {
+    display: block;
+    color: #222;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+label {
+  display: block;
+  font-size: 22px;
+}
+
+label + label {
+    margin-top: 22px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+input[type=text] {
+    width: 400px;
+    font-size: 17px;
+    padding: 3px;
+    font-family: palatino;
+}
+
+textarea {
+  width: 400px;
+  height: 300px;
+  font-size: 17px;
+  font-family: palatino;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.post + .post {
+    margin-top: 16px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 4px solid #666;
+}
+
+.post-title {
+    font-size: 23px;
+    font-weight: bold;
+
+    text-decoration: none;
+    color: #333;
+}
+
+.post-title:visited {
+    color: #333;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+
+.post-content {
+    margin-top: 5px;
+}
+
+.age {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: #999;
+    font-size: 12px;
+}
+
+.likes {
+    background-color: #f00;
+    font-size: 12px;
+    font-weight:300;;
+    text-align: center;
+    padding: 5px;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-bottom: 14px;
+    color: #fff;
+}
+
+.all-posts {
+  text-align: justify;
+}
+
+.post-by {
+  text-align: right;
+  display: inline;
+}
+
+.blog-post {
+  text-align: justify;
+}

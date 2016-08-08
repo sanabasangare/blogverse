@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <meta charset="utf-8">
+  <title>Blogverse</title>
+</head>
+<body>
+
+  <a href="/" class="main-title">//Blogverse</a>
+  <ul class="navigation">
+    {% if user %}
+        <li class="nav-item"><a href="/welcome">//Home</a></li>
+    {% else %}
+    <li class="nav-item"><a href="/">//Home</a></li>
+    {% endif %}
+    <li class="nav-item"><a href="/blog">//Blog</a></li>
+    <li class="nav-item"><a href="/blog/newpost">//Create new post</a></li>
+  </ul>
+
+  <div class="login-space">
+  {% if user %}
+    {{ user.username }} (<a class="login-link" href="/logout">logout</a>)
+  {% else %}
+    <a class="login-link" href="/login">Login</a>
+    |
+    <a class="login-link" href="/signup">Signup</a>
+  {% endif %}
+  </div>
+
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+</html>

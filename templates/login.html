@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<center>
+<div style="padding:10px;">
+  <h2>Login</h2>
+  <hr>
+  <div class="error">
+    {{ error }}
+  </div>
+  <form method="post">
+    <label>Username</label>
+    <input name="username" value="{{ username }}">
+    <br>
+    <label>Password</label>
+    <input type="password" name="password">
+    <br>
+    <input type="submit">
+  </form>
+</div>
+</center>
+{% endblock %}

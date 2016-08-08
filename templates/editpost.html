@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<center>
+<div style="padding:10px">
+
+  <h2 style="color: #f00; text-decoration: underline">Edit Blog Post</h2>
+  <form method="post">
+    <label>
+      <div>subject</div>
+      <input type="text" name="subject" value="{{ subject }}">
+    </label>
+    <label>
+      <div>content</div>
+      <textarea name="content">{{ content }}</textarea>
+    </label>
+    <div class="error">{{ error }}</div>
+    <br>
+    <input type="submit">
+  </form>
+  <a href="/blog">Cancel</a>
+
+</div>
+</center>
+{% endblock %}

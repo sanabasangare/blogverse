@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="padding:10px;">
+
+  <h2>{{ post.subject }}</h2> <h4><u>By</u> : <b>{{ post.creator.username }}</b></h4>
+  <h3>Posted on: {{ post.time_created.strftime("%b %d, %Y") }}</h3>
+  {% if post.creator.username == user.username %}
+  <div class="author-options" style="padding-bottom:2px;">
+    <button style="padding:4px; margin-right:8px;">
+    <a href="/blog/edit?post={{ post.key.id() }}">Edit</a>
+    </button>
+    <button style="padding:4px;">
+    <a href="/blog/delete?post={{ post.key.id() }}">Delete</a>
+    </button>
+  </div>
+  {% endif %}
+  <article class="blog-post">{{ post.content | safe }}</article>
+  <br>
+  <div class="likes">
+    {{ post.likes }} people like this
+    <hr>
+    {% if user.username and user.username != post.creator.username %}
+      {% if not liked %}
+        <form method="post" action="?like=True">
+          <button class="like" type="submit">➕ Like</button>
+        </form>
+      {% else %}
+        <form method="post" action="?unlike=True">
+          <button class="unlike" type="submit">➖ Unlike</button>
+        </form>
+      {% endif %}
+    {% endif %}
+  </div>
+  <hr>
+  <center>
+  <h3>Comments</h3>
+  {% for comment in comments %}
+    <div class="comment-author">
+      {% if user %}
+        {{ user.username }} wrote:
+      {% else %}
+        readers wrote:
+      {% endif %}
+    </div>
+    <div class="comment-content">
+      {{ comment.content }}
+    </div>
+    {% if comment.creator.username == user.username %}
+        <div class="author-options">
+          <a href="/comment/edit?comment={{ comment.key.id() }}">Edit</a>
+          <a href="/comment/delete?comment={{ comment.key.id() }}">Delete</a>
+        </div>
+      {% endif %}
+    <br>
+  {% endfor %}
+
+  {% if user.username %}
+    <form method="post">
+      <h4>Leave a comment</h4>
+      <textarea name="content">{{ content }}</textarea>
+      <div class="error">{{ error }}</div>
+      <br>
+      <input type="submit">
+    </form>
+  {% endif %}
+  <a href="/blog">Back to blog home</a>
+ </center>
+
+</div>
+{% endblock %}
