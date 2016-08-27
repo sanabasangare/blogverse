@@ -149,7 +149,7 @@ class BlogHandler(appHandler):
         self.render("blog.html", posts = posts)
 
 class NewPostHandler(appHandler):
-    ####Creates new post
+        ####Creates new post
     def get(self):
         if self.user:
             self.render("newpost.html")
@@ -176,7 +176,6 @@ class PostHandler(appHandler):
         post = key.get()
 
         ###### Comments
-
         comments = Comment.gql("WHERE post_id = %s ORDER BY time_created DESC" % int(post_id))
         liked = None
         if self.user:
