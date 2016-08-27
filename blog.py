@@ -36,7 +36,7 @@ def blog_key(name = 'default'):
     return ndb.Key('blogs', name)
 
 ##### Post contents
-class bloginfo(ndb.Model):
+class Bloginfo(ndb.Model):
     time_created = ndb.DateTimeProperty(auto_now_add = True)
     subject = ndb.StringProperty(required = True)
     content = ndb.TextProperty(required = True)
